@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "root/alu-shell/basics"
+echo "/alu-shell/basics"
+
 
