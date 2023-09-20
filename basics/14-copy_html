@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name '*.HTML' -newer ../ -exec cp {} ../ \;
+rsync -av --ignore-existing --update --include='*.HTML' --exclude='*' ./ ../
