@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Glory glory Man uted the greatest of them all" | rev
+rev
