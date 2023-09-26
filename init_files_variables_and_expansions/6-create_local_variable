@@ -1,0 +1,2 @@
+#!/bin/bash
+def create_local_variable(): return 10
