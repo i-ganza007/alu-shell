@@ -1,2 +1,2 @@
 #!/bin/bash
-def base2to10(BINARY): return int(BINARY, 2)
+echo "$((2#${BINARY}))"
