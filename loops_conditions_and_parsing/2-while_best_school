@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # While loop best school ten times
 count=0
 
