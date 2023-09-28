@@ -1,0 +1,9 @@
+#!/bin/bash
+# While loop best school ten times
+count=0
+
+while [ $count -lt 10 ]
+do
+    echo "Best School"
+    count=$((count + 1))
+done
