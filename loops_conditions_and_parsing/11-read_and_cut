@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Passwords is good
+
+# Use the 'cut' command to read and process the /etc/passwd file
+while IFS=: read -r username _ userid _ _ home_directory _
+do
+  echo "Username: $username"
+  echo "User ID: $userid"
+  echo "Home Directory: $home_directory"
+done < /etc/passwd
+
