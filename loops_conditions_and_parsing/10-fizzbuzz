@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Fizzbuzzing
+# Initialize a counter
+count=1
+
+# Use a while loop to iterate from 1 to 100
+while [ $count -le 100 ]
+do
+  # Check if the number is a multiple of 3 and 5
+  if [ $((count % 3)) -eq 0 ] && [ $((count % 5)) -eq 0 ]; then
+    echo "FizzBuzz"
+  # Check if the number is a multiple of 3
+  elif [ $((count % 3)) -eq 0 ]; then
+    echo "Fizz"
+  # Check if the number is a multiple of 5
+  elif [ $((count % 5)) -eq 0 ]; then
+    echo "Buzz"
+  # Otherwise, display the number
+  else
+    echo "$count"
+  fi
+
+  # Increment the counter
+  count=$((count + 1))
+done
+
