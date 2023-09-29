@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This is mad
+
+# Loop through non-hidden files in the current directory
+for file in *; do
+    # Check if the file is a regular file (not a directory)
+    if [ -f "$file" ]; then
+        # Use parameter expansion to extract the part after the first dash
+        filename="${file#*-}"
+        echo "$filename"
+    fi
+done
+
