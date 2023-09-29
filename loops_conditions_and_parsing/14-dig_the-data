@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Thsi is the last one
+
+# Assuming your log file is named "access.log," change it accordingly
+log_file="access.log"
+
+# Use awk to process the log file and count occurrences
+awk '{ ip_code = $1 " " $NF; count[ip_code]++ }
+     END {
+         for (ip_code in count) {
+             split(ip_code, parts, " ")
+             printf "%d %s %s\n", count[ip_code], parts[1], parts[2]
+         }
+     }' "$log_file" | sort -nr
+
