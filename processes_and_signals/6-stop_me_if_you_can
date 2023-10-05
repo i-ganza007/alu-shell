@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#THis is amodue
+
+# Find the process ID (PID) of the "4-to_infinity_and_beyond" process
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+if [ -z "$pid" ]; then
+    echo "Process not found."
+else
+    # Send the SIGTERM signal to gracefully terminate the process
+    pkill -f "4-to_infinity_and_beyond"
+    echo "Sent SIGTERM to process $pid."
+fi
+
