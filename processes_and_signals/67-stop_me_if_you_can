@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#THis is xaser
+
+# Function to handle SIGTERM signal
+handle_sigterm() {
+    echo "I am invincible!!!"
+    # Find and kill the '7-highlander' process
+    pkill -x "7-highlander"
+    exit 0
+}
+
+# Register the SIGTERM signal handler
+trap 'handle_sigterm' SIGTERM
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
+
