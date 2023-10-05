@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#This is for the indefinfite 
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 1  # Add a 1-second delay between each message
+done
+
