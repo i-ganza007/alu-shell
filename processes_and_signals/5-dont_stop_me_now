@@ -7,6 +7,6 @@ then
     # If the process is running, stop it
     pkill -x "4-to_infinity_and_beyond"
     echo "Process '4-to_infinity_and_beyond' has been stopped."
-else
-    echo "Process '4-to_infinity_and_beyond' is not running."
+else    
 fi
+ 
