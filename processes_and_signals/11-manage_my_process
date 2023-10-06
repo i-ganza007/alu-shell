@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#dunno
+# Start manage_my_process
+./11-manage_my_process start
+
+# Stop manage_my_process
+./11-manage_my_process stop
+
+# Restart manage_my_process
+./11-manage_my_process restart
+
+# Display usage message for invalid or no arguments
+./11-manage_my_process
+
