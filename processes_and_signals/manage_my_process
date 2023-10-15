@@ -1,51 +1,6 @@
 #!/usr/bin/env bash
-#This is the last one 
-# Function to start manage_my_process
-start_manage_my_process() {
-  if [ -f "/var/run/my_process.pid" ]; then
-    echo "manage_my_process is already running."
-  else
-    nohup ./manage_my_process.sh > /tmp/my_process 2>&1 &
-    echo $! > /var/run/my_process.pid
-    echo "manage_my_process started."
-  fi
-}
-
-# Function to stop manage_my_process
-stop_manage_my_process() {
-  if [ -f "/var/run/my_process.pid" ]; then
-    local pid=$(cat /var/run/my_process.pid)
-    kill $pid
-    rm -f "/var/run/my_process.pid"
-    echo "manage_my_process stopped."
-  else
-    echo "manage_my_process is not running."
-  fi
-}
-
-# Function to restart manage_my_process
-restart_manage_my_process() {
-  stop_manage_my_process
-  start_manage_my_process
-  echo "manage_my_process restarted."
-}
-
-# Main script
-case "$1" in
-  start)
-    start_manage_my_process
-    ;;
-  stop)
-    stop_manage_my_process
-    ;;
-  restart)
-    restart_manage_my_process
-    ;;
-  *)
-    echo "Usage: manage_my_process {start|stop|restart}"
-    exit 1
-    ;;
-esac
-
-exit 0
-
+#This is the last
+while [[ 1 -eq 1 ]]; do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done
